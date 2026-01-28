@@ -349,73 +349,83 @@ export const Main = () => {
         {/* ===== About / Mission Section ===== */}
         <section id="about" className="section-padding" style={{ background: 'var(--color-bg-level-1)' }}>
           <div className="container-main">
-            {/* Section Header */}
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 badge badge-brand mb-4">
-                <span className="eyebrow-indicator" style={{ color: 'var(--color-success)' }} />
-                <span>OUR MISSION</span>
-              </div>
-              <h2 className="title-7 text-primary mb-4">
-                Building the Intelligent Enterprise
-              </h2>
-              <p className="text-large text-secondary max-w-3xl mx-auto">
-                We believe intelligence is the foundation of the modern enterprise. We build systems that learn, 
-                adapt, and empower — turning complexity into clarity and data into action.
-              </p>
-            </div>
-            
-            {/* Values Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-              {/* Trust */}
-              <div className="card text-center group">
-                <div className="icon-container mx-auto mb-6 group-hover:scale-110" style={{ transition: 'transform 0.2s var(--ease-out-quint)' }}>
-                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
+            {/* Header - Left-aligned asymmetric grid */}
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-16">
+              <div className="md:col-span-7">
+                <div className="inline-flex items-center gap-2 badge badge-brand mb-4">
+                  <span className="eyebrow-indicator" style={{ color: 'var(--color-success)' }} />
+                  <span>OUR MISSION</span>
                 </div>
-                <h3 className="title-3 text-primary mb-3">Trust</h3>
-                <p className="text-regular text-secondary">
-                  Building reliable systems that organizations can depend on for critical decisions.
-                </p>
+                <h2 className="title-7 text-primary">
+                  Building the Intelligent Enterprise
+                </h2>
               </div>
-              
-              {/* Innovation */}
-              <div className="card text-center group">
-                <div className="icon-container mx-auto mb-6 group-hover:scale-110" style={{ transition: 'transform 0.2s var(--ease-out-quint)' }}>
-                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <h3 className="title-3 text-primary mb-3">Innovation</h3>
-                <p className="text-regular text-secondary">
-                  Pushing the boundaries of what's possible with AI and enterprise intelligence.
-                </p>
-              </div>
-              
-              {/* Collaboration */}
-              <div className="card text-center group">
-                <div className="icon-container mx-auto mb-6 group-hover:scale-110" style={{ transition: 'transform 0.2s var(--ease-out-quint)' }}>
-                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
-                </div>
-                <h3 className="title-3 text-primary mb-3">Collaboration</h3>
-                <p className="text-regular text-secondary">
-                  Empowering teams to work together with intelligent tools and insights.
+              <div className="md:col-span-5" style={{ alignSelf: 'end' }}>
+                <p className="text-large text-secondary">
+                  We believe intelligence is the foundation of the modern enterprise. We build systems that learn,
+                  adapt, and empower — turning complexity into clarity and data into action.
                 </p>
               </div>
             </div>
-            
-            {/* Quote Block - 使用玻璃态双层结构 */}
-            <div className="glass-container-outer max-w-3xl mx-auto">
-              <div className="glass-container-inner p-8 md:p-12 text-center">
-                <blockquote className="title-4 text-primary italic mb-6 leading-relaxed">
+
+            {/* Bento Grid - Quote left, Values right */}
+            <div className="bento-grid" style={{ borderTop: '2px solid var(--color-border-translucent)', borderBottom: '2px solid var(--color-border-translucent)' }}>
+              {/* Quote - Left Cell */}
+              <div className="bento-span-6 relative" style={{ padding: 'var(--space-2xl) var(--space-xl)', borderRight: '2px solid var(--color-border-translucent)' }}>
+                <blockquote className="title-5 text-primary italic leading-relaxed mb-8" style={{ textWrap: 'balance' }}>
                   "True intelligence is not about algorithms — it's about empowering humans to make better choices."
                 </blockquote>
-                <div className="flex items-center justify-center gap-4">
-                  <div className="divider flex-1 max-w-24" />
-                  <cite className="text-small text-tertiary not-italic font-medium">— AIBIEI Team</cite>
-                  <div className="divider flex-1 max-w-24" />
+                <cite className="text-small text-tertiary not-italic font-medium">— AIBIEI Team</cite>
+              </div>
+
+              {/* Values - Right Cell as spec list */}
+              <div className="bento-span-6" style={{ padding: 'var(--space-2xl) var(--space-xl)' }}>
+                <div className="flex flex-col gap-8">
+                  <div className="flex items-start gap-4">
+                    <div className="icon-container shrink-0">
+                      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-small font-medium text-primary mb-1">Trust</h3>
+                      <p className="text-small text-tertiary">
+                        Building reliable systems that organizations can depend on for critical decisions.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="divider" />
+
+                  <div className="flex items-start gap-4">
+                    <div className="icon-container shrink-0">
+                      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-small font-medium text-primary mb-1">Innovation</h3>
+                      <p className="text-small text-tertiary">
+                        Pushing the boundaries of what's possible with AI and enterprise intelligence.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="divider" />
+
+                  <div className="flex items-start gap-4">
+                    <div className="icon-container shrink-0">
+                      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-small font-medium text-primary mb-1">Collaboration</h3>
+                      <p className="text-small text-tertiary">
+                        Empowering teams to work together with intelligent tools and insights.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -423,60 +433,21 @@ export const Main = () => {
         </section>
 
         {/* ===== CTA Section ===== */}
-        <section id="contact" className="section-padding bg-page relative overflow-hidden">
-          {/* Glow effect - 使用品牌色 */}
-          <div 
-            className="absolute inset-0 z-0"
-            style={{
-              background: `
-                radial-gradient(ellipse 50% 80% at 50% 120%, rgba(94, 106, 210, 0.08), transparent),
-                radial-gradient(ellipse 80% 50% at 50% 50%, rgba(255, 255, 255, 0.02), transparent)
-              `,
-            }}
-          />
-          
-          <div className="container-main relative z-10">
-            <div className="glass-container-outer max-w-4xl mx-auto">
-              <div className="glass-container-inner py-16 px-8 text-center">
-                <h2 className="title-6 text-primary mb-4">
-                  Transform Your Business
+        <section id="contact" style={{ paddingTop: 'var(--space-4xl)', paddingBottom: 'var(--space-4xl)' }}>
+          <div className="container-main">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+              <div className="md:col-span-7">
+                <h2 className="title-7 text-primary" style={{ textWrap: 'balance' }}>
+                  Plan the intelligence. Build the future.
                 </h2>
-                <p className="text-large text-secondary max-w-2xl mx-auto mb-8">
-                  Join the movement toward intelligent enterprise transformation.
-                  Experience the synergy of AI, BI, and EI.
-                </p>
-                
-                {/* CTA Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-                  <button className="btn-primary">
-                    Request Demo
-                  </button>
-                  <button className="btn-secondary">
-                    Contact Sales
-                  </button>
-                </div>
-                
-                {/* Feature Pills */}
-                <div className="flex flex-wrap justify-center gap-6">
-                  <div className="flex items-center gap-2 text-tertiary">
-                    <svg className="w-5 h-5 text-[var(--color-success)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-small">Quick Implementation</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-tertiary">
-                    <svg className="w-5 h-5 text-[var(--color-success)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-small">99.9% Uptime</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-tertiary">
-                    <svg className="w-5 h-5 text-[var(--color-success)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-small">24/7 Support</span>
-                  </div>
-                </div>
+              </div>
+              <div className="md:col-span-5 flex flex-col sm:flex-row items-center justify-end gap-3">
+                <button className="btn-secondary w-full sm:w-auto">
+                  Contact Sales
+                </button>
+                <button className="btn-primary w-full sm:w-auto">
+                  Get Started
+                </button>
               </div>
             </div>
           </div>
