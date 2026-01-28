@@ -1,5 +1,6 @@
 // @ts-nocheck
 import { Navigation } from './navigation';
+import { HeroShader } from './hero-shader';
 
 // SVG 噪点滤镜组件
 const NoiseFilter = () => (
@@ -29,16 +30,7 @@ export const Main = () => {
       <main className="bg-page">
         {/* ===== Hero Section ===== */}
         <section className="relative min-h-screen flex items-center justify-center glow-top overflow-hidden pt-[var(--nav-height)]">
-          {/* Background Gradient - 多层渐变 */}
-          <div 
-            className="absolute inset-0 z-0"
-            style={{
-              background: `
-                radial-gradient(ellipse 80% 50% at 50% -20%, rgba(94, 106, 210, 0.08), transparent),
-                radial-gradient(ellipse 60% 40% at 50% 50%, rgba(255, 255, 255, 0.02), transparent)
-              `,
-            }}
-          />
+          <HeroShader />
           
           <div className="container-main relative z-10 text-center py-[var(--space-4xl)]">
             {/* Badge - 使用玻璃态 */}
