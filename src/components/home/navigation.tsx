@@ -6,7 +6,7 @@ export const Navigation = () => {
       <div className="container-main h-full flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <span className="text-h3 font-semibold text-primary">AIBIEI</span>
+          <span className="title-2 text-primary">AIBIEI</span>
         </div>
 
         {/* Nav Links - Desktop */}
