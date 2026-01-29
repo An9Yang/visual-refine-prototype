@@ -49,3 +49,6 @@ coverage/
 
 # Testing
 .nyc_output/
+
+# Vercel
+.vercel/
