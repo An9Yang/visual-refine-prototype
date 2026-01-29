@@ -250,7 +250,7 @@ export const Main = () => {
             {/* Solutions Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
               {/* Solution 1 */}
-              <div className="card-glass group cursor-pointer">
+              <div className="card-glass bento-cell group cursor-pointer">
                 <div className="flex items-start gap-4">
                   <div className="icon-container shrink-0 group-hover:scale-110" style={{ transition: 'transform 0.2s var(--ease-out-quint)' }}>
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -269,7 +269,7 @@ export const Main = () => {
               </div>
               
               {/* Solution 2 */}
-              <div className="card-glass group cursor-pointer">
+              <div className="card-glass bento-cell group cursor-pointer">
                 <div className="flex items-start gap-4">
                   <div className="icon-container shrink-0 group-hover:scale-110" style={{ transition: 'transform 0.2s var(--ease-out-quint)' }}>
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -288,7 +288,7 @@ export const Main = () => {
               </div>
               
               {/* Solution 3 */}
-              <div className="card-glass group cursor-pointer">
+              <div className="card-glass bento-cell group cursor-pointer">
                 <div className="flex items-start gap-4">
                   <div className="icon-container shrink-0 group-hover:scale-110" style={{ transition: 'transform 0.2s var(--ease-out-quint)' }}>
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -307,7 +307,7 @@ export const Main = () => {
               </div>
               
               {/* Solution 4 */}
-              <div className="card-glass group cursor-pointer">
+              <div className="card-glass bento-cell group cursor-pointer">
                 <div className="flex items-start gap-4">
                   <div className="icon-container shrink-0 group-hover:scale-110" style={{ transition: 'transform 0.2s var(--ease-out-quint)' }}>
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
